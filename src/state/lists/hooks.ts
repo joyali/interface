@@ -1,3 +1,4 @@
+import { KARMA_TOKEN_LISTS } from '../../constants/lists'
 import { ChainId, Token } from '@uniswap/sdk'
 import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists'
 import { useMemo } from 'react'
@@ -31,7 +32,7 @@ export type TokenAddressMap = Readonly<{ [chainId in ChainId]: Readonly<{ [token
  * An empty result, useful as a default.
  */
 const EMPTY_LIST: TokenAddressMap = {
- 
+
   [ChainId.MUMBAI]: {},
   [ChainId.MATIC]: {}
 }
@@ -69,12 +70,22 @@ export function listToTokenMap(list: TokenList): TokenAddressMap {
 }
 
 export function useTokenList(url: string | undefined): TokenAddressMap {
-  const lists = useSelector<AppState, AppState['lists']['byUrl']>(state => state.lists.byUrl)
+  // const lists = useSelector<AppState, AppState['lists']['byUrl']>(state => state.lists.byUrl)
+  const lists: {
+    [key: string]: {
+      current: any
+    }
+  } = {
+    [url!]: {
+      current: KARMA_TOKEN_LISTS
+    }
+  }
   return useMemo(() => {
     if (!url) return EMPTY_LIST
     const current = lists[url]?.current
     if (!current) return EMPTY_LIST
     try {
+      // console.log(666, current)
       return listToTokenMap(current)
     } catch (error) {
       console.error('Could not show token list due to error', error)

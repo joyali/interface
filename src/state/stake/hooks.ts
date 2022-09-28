@@ -7,7 +7,7 @@ import {
   PAIRS_BULK,
   PAIRS_HISTORICAL_BULK
 } from '../../apollo/queries'
-import { 
+import {
   UNI,
   USDC,
   ETHER,
@@ -130,7 +130,9 @@ import { tryParseAmount } from '../swap/hooks'
 import Web3 from 'web3';
 import { useLairContract, useQUICKContract } from '../../hooks/useContract'
 
-const web3 = new Web3("https://rpc-quickswap-do1-mainnet.maticvigil.com/v1/f11d33ea6df187c24fe994283187a4bedb086d45");
+
+// const web3 = new Web3("https://rpc-quickswap-do1-mainnet.maticvigil.com/v1/f11d33ea6df187c24fe994283187a4bedb086d45");
+const web3 = new Web3("https://polygon-rpc.com");
 
 export const STAKING_GENESIS = 1620842940;
 
@@ -1058,7 +1060,7 @@ export const OLD_STAKING_REWARDS_INFO: {
       rate: 0.1,
       pair: '0xab71ce8d652c4a858654fbb6450cf2e3116d6062'
     },
-    
+
     {
       tokens: [FRAX,QUICK],
       stakingRewardAddress: '0xa859D2C37A49bbd5992E39FCC37a7dD56aE130E7',
@@ -1219,7 +1221,7 @@ export const OLD_STAKING_REWARDS_INFO: {
       rate: 10,
       pair: '0xfc2fc983a411c4b1e238f7eb949308cf0218c750'
     },
-    
+
     {
       tokens: [WOLF,MATIC],
       stakingRewardAddress: '0x3139523e1507cF6B0700Be2EABea6D5e919C6369',
@@ -1279,7 +1281,7 @@ export const OLD_STAKING_REWARDS_INFO: {
       baseToken: USDC,
       rate: 2,
       pair: '0x6405ebc22cb0899fc21f414085ac4044b4721a0d'
-    },  
+    },
   {
       tokens: [AGAr,QUICK],
       stakingRewardAddress: '0xa6b85D97853248973d11B9c806492D405D1B50e5',
@@ -1666,9 +1668,9 @@ export const VERY_OLD_STAKING_REWARDS_INFO: {
   }[]
 } = {
   [ChainId.MATIC]: [//TODO: MATIC
-    
-    
-    
+
+
+
 {
   tokens: [MAUSDC,QUICK],
   stakingRewardAddress: '0x8df5AdD0eB677d12EA86C5f83DdB7e184b750116',
@@ -2676,7 +2678,7 @@ pair: '',
       lp: '',
       name: '',
       baseToken: QUICK }
-  
+
     ,{ tokens: [MATIC,QUICK],
       stakingRewardAddress: '0xA958408a73253a7CA59aa62c4F048B1d21E3DA32',
       ended: true,
@@ -3077,7 +3079,7 @@ pair: '',
       lp: '',
       name: '',
       baseToken: MAUSDC },
-    
+
     { tokens: [SX,QUICK],
       stakingRewardAddress: '0x3a806E445E76eC82AB9E9eD52d1Ea26b86b20535',
       ended: true,
@@ -4672,7 +4674,7 @@ pair: '',
       lp: '',
       name: '',
       baseToken: ETHER },
-    
+
     { tokens: [HEX,QUICK],
       stakingRewardAddress: '0x16F564E63a59663685b4fAbF0B930Db51C10680E',
       ended: true,
@@ -5281,7 +5283,7 @@ pair: '',
       lp: '',
       name: '',
       baseToken: ETHER },
-    
+
     { tokens: [QUICK,AZUKI],
       stakingRewardAddress: '0xE90960FaFdbbbCA56e339f59B24Ef85B851519fD',
       ended: true,
@@ -5466,7 +5468,7 @@ pair: '',
       name: 'StkGHST-QUICK',
       lp: '0xA02d547512Bb90002807499F05495Fe9C4C3943f',
       baseToken: QUICK
-      
+
     },
     { tokens: [WBTC,ETHER],
       stakingRewardAddress: '0x62AEF7797512095b6d640E4103264c41386063ae',
@@ -5901,7 +5903,7 @@ pair: '',
       lp: '',
       name: '',
 baseToken: ETHER },
-    
+
     { tokens: [SX,DAI],
       stakingRewardAddress: '0x38f8eB09a82B96B5a86773681D20d1Ad587385b8',
       ended: true,
@@ -6399,7 +6401,7 @@ pair: '',
       lp: '',
       name: '',
 baseToken: EMPTY },
-    
+
     { tokens: [SX,QUICK],
       stakingRewardAddress: '0x6E2c6Ec20B1D37C68d55853F041E26C7085F0609',
       ended: true,
@@ -6558,7 +6560,7 @@ baseToken: EMPTY },
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6570,7 +6572,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: 'StkGHST-QUICK',
       lp: '0xA02d547512Bb90002807499F05495Fe9C4C3943f',
       baseToken: EMPTY
@@ -6582,7 +6584,7 @@ pair: '',
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6594,7 +6596,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6606,7 +6608,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6618,7 +6620,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: 'stkGHST-USDC',
       lp: '0x04439eC4ba8b09acfae0E9b5D75A82cC63b19f09',
       baseToken: EMPTY
@@ -6630,7 +6632,7 @@ pair: '',
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6642,7 +6644,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6654,7 +6656,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6666,7 +6668,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6678,7 +6680,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6690,7 +6692,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6702,7 +6704,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6714,7 +6716,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6726,7 +6728,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6738,7 +6740,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6750,7 +6752,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6762,7 +6764,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6774,7 +6776,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6786,7 +6788,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6798,7 +6800,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6810,7 +6812,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6822,7 +6824,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6834,7 +6836,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6846,20 +6848,20 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
       //STAKINGREWARDSFACTORY- 0xbD20FAdBdd65A73A15452Ce0adf7d4943e102b69
     },
-    
+
     {
       tokens: [MAUSDC, MAWETH],
       stakingRewardAddress: '0x22c79bB6641a0D2f573cCa0d8E2349F4fcFa6BED',
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6871,7 +6873,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6883,7 +6885,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6895,7 +6897,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6907,7 +6909,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6919,7 +6921,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6931,7 +6933,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6943,7 +6945,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6955,7 +6957,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6967,7 +6969,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6979,7 +6981,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -6991,7 +6993,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7003,7 +7005,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7015,7 +7017,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7027,7 +7029,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7039,7 +7041,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7051,7 +7053,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7063,7 +7065,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7075,7 +7077,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7087,7 +7089,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7099,7 +7101,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7111,7 +7113,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7123,7 +7125,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7135,7 +7137,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7147,7 +7149,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: 'StkQUICK-GHST',
       lp: '0xA02d547512Bb90002807499F05495Fe9C4C3943f',
       baseToken: EMPTY
@@ -7159,7 +7161,7 @@ pair: '',
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7171,7 +7173,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7183,7 +7185,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7195,7 +7197,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7207,7 +7209,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7219,7 +7221,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7231,7 +7233,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7243,7 +7245,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7255,7 +7257,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7267,7 +7269,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7279,7 +7281,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7291,7 +7293,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7303,7 +7305,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7315,7 +7317,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7327,7 +7329,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7339,7 +7341,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7351,7 +7353,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7363,7 +7365,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7375,7 +7377,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7387,7 +7389,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7399,7 +7401,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: 'StkQUICK-GHST',
       lp: '0xA02d547512Bb90002807499F05495Fe9C4C3943f',
       baseToken: EMPTY
@@ -7411,7 +7413,7 @@ pair: '',
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7423,7 +7425,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7435,7 +7437,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7447,7 +7449,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7459,7 +7461,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7471,7 +7473,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7483,7 +7485,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7495,7 +7497,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7507,7 +7509,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7519,7 +7521,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: 'StkQUICK-GHST',
       lp: '0xA02d547512Bb90002807499F05495Fe9C4C3943f',
       baseToken: EMPTY
@@ -7531,7 +7533,7 @@ pair: '',
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7543,7 +7545,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7555,7 +7557,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7567,7 +7569,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7579,7 +7581,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7591,7 +7593,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7603,7 +7605,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7615,7 +7617,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7627,7 +7629,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7639,7 +7641,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7651,7 +7653,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7663,7 +7665,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7675,7 +7677,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7687,7 +7689,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7699,7 +7701,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7711,7 +7713,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7723,7 +7725,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7735,7 +7737,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7747,7 +7749,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7759,7 +7761,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7771,7 +7773,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7785,7 +7787,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7797,7 +7799,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7809,7 +7811,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7821,7 +7823,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7833,7 +7835,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7845,7 +7847,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7857,7 +7859,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7869,7 +7871,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7881,7 +7883,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7893,7 +7895,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7907,7 +7909,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7919,7 +7921,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7931,7 +7933,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7943,7 +7945,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7955,7 +7957,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7967,7 +7969,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7979,7 +7981,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -7991,7 +7993,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8003,7 +8005,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8015,7 +8017,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8027,7 +8029,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8045,7 +8047,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x8A121aECBFFa81A9d4B1eeA6290F20C4487d990D
     },
     {
@@ -8058,7 +8060,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x8A121aECBFFa81A9d4B1eeA6290F20C4487d990D
     },
     {
@@ -8071,7 +8073,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x8A121aECBFFa81A9d4B1eeA6290F20C4487d990D
     },
     {
@@ -8084,7 +8086,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x8A121aECBFFa81A9d4B1eeA6290F20C4487d990D
     },
     {
@@ -8097,7 +8099,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x8A121aECBFFa81A9d4B1eeA6290F20C4487d990D
     },
     {
@@ -8110,7 +8112,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x8A121aECBFFa81A9d4B1eeA6290F20C4487d990D
     },
     {
@@ -8123,7 +8125,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x8A121aECBFFa81A9d4B1eeA6290F20C4487d990D
     },
     {
@@ -8136,7 +8138,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x8A121aECBFFa81A9d4B1eeA6290F20C4487d990D
     },
     {
@@ -8149,7 +8151,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x8A121aECBFFa81A9d4B1eeA6290F20C4487d990D
     },
     {
@@ -8162,7 +8164,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x8A121aECBFFa81A9d4B1eeA6290F20C4487d990D
     },
 
@@ -8178,7 +8180,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0xE8aF51444824b23d71987166b3ECa9d4C28eA4A6
     },
     {
@@ -8191,7 +8193,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0xE8aF51444824b23d71987166b3ECa9d4C28eA4A6
     },
     {
@@ -8204,7 +8206,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0xE8aF51444824b23d71987166b3ECa9d4C28eA4A6
     },
     {
@@ -8217,7 +8219,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0xE8aF51444824b23d71987166b3ECa9d4C28eA4A6
     },
     {
@@ -8230,7 +8232,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0xE8aF51444824b23d71987166b3ECa9d4C28eA4A6
     },
     {
@@ -8243,7 +8245,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0xE8aF51444824b23d71987166b3ECa9d4C28eA4A6
     },
     {
@@ -8256,7 +8258,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0xE8aF51444824b23d71987166b3ECa9d4C28eA4A6
     },
     {
@@ -8269,7 +8271,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0xE8aF51444824b23d71987166b3ECa9d4C28eA4A6
     },
     {
@@ -8282,7 +8284,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0xE8aF51444824b23d71987166b3ECa9d4C28eA4A6
     },
 
@@ -8297,7 +8299,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x122cfEd20D7C812cbcEC5538BB8DE3e46c94BEf6
     },
     {
@@ -8310,7 +8312,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x122cfEd20D7C812cbcEC5538BB8DE3e46c94BEf6
     },
     {
@@ -8323,7 +8325,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x122cfEd20D7C812cbcEC5538BB8DE3e46c94BEf6
     },
     {
@@ -8336,7 +8338,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x122cfEd20D7C812cbcEC5538BB8DE3e46c94BEf6
     },
     {
@@ -8349,7 +8351,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x122cfEd20D7C812cbcEC5538BB8DE3e46c94BEf6
     },
     {
@@ -8362,7 +8364,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x122cfEd20D7C812cbcEC5538BB8DE3e46c94BEf6
     },
     {
@@ -8374,7 +8376,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x122cfEd20D7C812cbcEC5538BB8DE3e46c94BEf6
     },
     {
@@ -8386,7 +8388,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x122cfEd20D7C812cbcEC5538BB8DE3e46c94BEf6
     },
     {
@@ -8398,7 +8400,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x122cfEd20D7C812cbcEC5538BB8DE3e46c94BEf6
     },
 
@@ -8412,7 +8414,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x17D0a95553625CfF6A7320c69aD0060969331e39
     },
     {
@@ -8424,7 +8426,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x17D0a95553625CfF6A7320c69aD0060969331e39
     },
     {
@@ -8436,7 +8438,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x17D0a95553625CfF6A7320c69aD0060969331e39
     },
     {
@@ -8448,7 +8450,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x17D0a95553625CfF6A7320c69aD0060969331e39
     },
     {
@@ -8460,7 +8462,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x17D0a95553625CfF6A7320c69aD0060969331e39
     },
     {
@@ -8472,7 +8474,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x80F13018Eb0CbD2579924Eb8039C5d36E467EB49
     },
     {
@@ -8484,7 +8486,7 @@ pair: '',
       name: '',
 baseToken: EMPTY,
       lp: ''
-      
+
       //STAKINGREWARDSFACTORY- 0x80F13018Eb0CbD2579924Eb8039C5d36E467EB49
     },
 
@@ -8496,7 +8498,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8508,7 +8510,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: 'StkGHST-QUICK',
       lp: '0xA02d547512Bb90002807499F05495Fe9C4C3943f',
       baseToken: EMPTY
@@ -8520,7 +8522,7 @@ pair: '',
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8532,7 +8534,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8544,7 +8546,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8556,7 +8558,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8568,7 +8570,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: 'stkGHST-USDC',
       lp: '0x04439eC4ba8b09acfae0E9b5D75A82cC63b19f09',
       baseToken: EMPTY
@@ -8580,7 +8582,7 @@ pair: '',
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8592,7 +8594,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8604,7 +8606,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8616,7 +8618,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8628,7 +8630,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8640,7 +8642,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8652,7 +8654,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8664,7 +8666,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8676,7 +8678,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8688,7 +8690,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8700,7 +8702,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8712,7 +8714,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8724,7 +8726,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8736,7 +8738,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8748,7 +8750,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8760,7 +8762,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8772,7 +8774,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8784,7 +8786,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8796,7 +8798,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8808,7 +8810,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8820,7 +8822,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8832,7 +8834,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8844,7 +8846,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8856,7 +8858,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8868,7 +8870,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8880,7 +8882,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8892,7 +8894,7 @@ baseToken: EMPTY,
       ended: true,
 rate: 0,
 pair: '',
-      
+
       name: '',
 baseToken: EMPTY,
       lp: ''
@@ -8981,7 +8983,7 @@ export interface StakingInfo {
   }
   const current = await web3.eth.getBlockNumber();
   const oneDayOldBlock = current - 44000;
-  
+
   try {
     let current = await client.query({
       query: PAIRS_BULK(pairList),
@@ -9010,12 +9012,12 @@ export interface StakingInfo {
         current.data.pairs.map(async (pair:any) => {
           let data = pair
           let oneDayHistory = oneDayData?.[pair.id]
-          
+
           data = parseData(data, oneDayHistory)
           return data
         })
     )
-    
+
     const object = convertArrayToObject(pairData, 'id');
     if (Object.keys(object).length > 0){
       pairs = object;
@@ -9058,7 +9060,7 @@ function parseData(data: any, oneDayData: any) {
   returnData.oneDayVolumeUSD = parseFloat(oneDayVolumeUSD?.toString())
   returnData.reserveUSD = data.reserveUSD
   returnData.totalSupply = data.totalSupply
-  
+
   return returnData;
 }
 
@@ -9093,7 +9095,7 @@ export function useLairInfo(): LairInfo {
         totalQuickBalance: new TokenAmount(QUICK, JSBI.BigInt(lairsQuickBalance?.result?.[0] ?? 0))
       }
     )
-    
+
   }, [LAIR_ADDRESS, dQuickToQuick, quickToDQuick, quickBalance, dQuickBalance])
 
 }
@@ -9123,15 +9125,15 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
 
   const rewardsAddresses = useMemo(() => info.map(({ stakingRewardAddress }) => stakingRewardAddress), [info])
   const pairAddresses = useMemo(() => info.map(({ pair }) => pair), [info])
-  
+
   useEffect(() => {
- 
+
     getBulkPairData(pairAddresses).then((data)=>{
     })
   }, [pairAddresses])
 
   const accountArg = useMemo(() => [account ?? undefined], [account])
-   
+
   // get all the info from the staking rewards contracts
   const balances = useMultipleContractSingleData(rewardsAddresses, STAKING_REWARDS_INTERFACE, 'balanceOf', accountArg)
   const earnedAmounts = useMultipleContractSingleData(rewardsAddresses, STAKING_REWARDS_INTERFACE, 'earned', accountArg)
@@ -9225,7 +9227,7 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
         if(pairs !== undefined){
           //@ts-ignore
           oneYearFeeAPY = pairs[info[index].pair]?.oneDayVolumeUSD;
-          
+
           if(oneYearFeeAPY) {
             const totalSupply = web3.utils.toWei(pairs[info[index].pair]?.totalSupply, "ether");
             const ratio = Number(totalSupplyState.result?.[0].toString()) / Number(totalSupply);
@@ -9234,9 +9236,9 @@ export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
             accountFee = oneDayFee * myRatio;
             oneYearFeeAPY = ( oneYearFeeAPY * 0.003 * 365) / pairs[info[index].pair]?.reserveUSD
             //console.log(info[index].pair, oneYearFeeAPY);
-          } 
+          }
         }
-        
+
         memo.push({
           stakingRewardAddress: rewardsAddress,
           tokens: info[index].tokens,
@@ -9321,7 +9323,7 @@ export function useVeryOldStakingInfo(pairToFilterBy?: Pair | null): StakingInfo
         // always need these
         totalSupplyState &&
         !totalSupplyState.loading &&
-      
+
         periodFinishState &&
         !periodFinishState.loading
       ) {
@@ -9436,7 +9438,7 @@ export function useOldStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
 
       // these get fetched regardless of account
       const totalSupplyState = totalSupplies[index]
-      
+
       const periodFinishState = periodFinishes[index]
 
       if (
@@ -9446,7 +9448,7 @@ export function useOldStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
         // always need these
         totalSupplyState &&
         !totalSupplyState.loading &&
-       
+
         periodFinishState &&
         !periodFinishState.loading
       ) {

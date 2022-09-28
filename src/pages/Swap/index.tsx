@@ -62,7 +62,7 @@ export default function Swap() {
 
   const { account } = useActiveWeb3React()
   const theme = useContext(ThemeContext)
-  const { ethereum } = window;
+  const { ethereum } = window
 
   // toggle wallet when disconnected
   const toggleWalletModal = useWalletModalToggle()
@@ -194,10 +194,7 @@ export default function Swap() {
               : (recipientAddress ?? recipient) === account
               ? 'Swap w/o Send + recipient'
               : 'Swap w/ Send',
-          label: [
-            trade?.inputAmount?.currency?.symbol,
-            trade?.outputAmount?.currency?.symbol
-          ].join('/')
+          label: [trade?.inputAmount?.currency?.symbol, trade?.outputAmount?.currency?.symbol].join('/')
         })
       })
       .catch(error => {
@@ -255,39 +252,37 @@ export default function Swap() {
   ])
 
   const addMaticToMetamask = () => {
-    if(ethereum) {
+    if (ethereum) {
       // @ts-ignore
       ethereum.request({
-        method: 'wallet_addEthereumChain',
-        params: [{
-          "chainId": "0x89",
-          "chainName": "Matic Network",
-          "rpcUrls": ["https://rpc-mainnet.maticvigil.com"],
-          "iconUrls": [
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png"
-          ],
-          "blockExplorerUrls" :[
-            "https://polygonscan.com/"
-          ],
-          "nativeCurrency": {
-            "name": "Matic Token",
-            "symbol": "MATIC",
-            "decimals": 18
+          method: 'wallet_addEthereumChain',
+          params: [
+            {
+              chainId: '0x89',
+              chainName: 'Matic Network',
+              rpcUrls: ['https://rpc-mainnet.maticvigil.com'],
+              iconUrls: [
+                'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png'
+              ],
+              blockExplorerUrls: ['https://polygonscan.com/'],
+              nativeCurrency: {
+                name: 'Matic Token',
+                symbol: 'MATIC',
+                decimals: 18
+              }
+            }
+          ] // you must have access to the specified account
+        })
+        .then((result: any) => {})
+        .catch((error: any) => {
+          if (error.code === 4001) {
+            // EIP-1193 userRejectedRequest error
+            console.log('We can encrypt anything without the key.')
+          } else {
+            console.error(error)
           }
-        }], // you must have access to the specified account
-      })
-      .then((result:any) => {
-      })
-      .catch((error:any) => {
-        if (error.code === 4001) {
-          // EIP-1193 userRejectedRequest error
-          console.log('We can encrypt anything without the key.');
-        } else {
-          console.error(error);
-        }
-      });
+        })
     }
-    
   }
 
   return (
@@ -401,7 +396,17 @@ export default function Swap() {
           </AutoColumn>
           <BottomGrouping>
             {!account ? (
-              <ButtonLight onClick={(ethereum && ethereum.isMetaMask && Number(ethereum.chainId) !== 137) ? addMaticToMetamask : toggleWalletModal}>{(ethereum && ethereum.isMetaMask && Number(ethereum?.chainId) !== 137)? 'Switch to Matic': 'Connect Wallet'}</ButtonLight>
+              <ButtonLight
+                onClick={
+                  ethereum && ethereum.isMetaMask && Number(ethereum.chainId) !== 137
+                    ? addMaticToMetamask
+                    : toggleWalletModal
+                }
+              >
+                {ethereum && ethereum.isMetaMask && Number(ethereum?.chainId) !== 137
+                  ? 'Switch to Matic'
+                  : 'Connect Wallet'}
+              </ButtonLight>
             ) : showWrap ? (
               <ButtonPrimary disabled={Boolean(wrapInputError)} onClick={onWrap}>
                 {wrapInputError ??
